@@ -1,0 +1,36 @@
+{
+  "name": "with-firebase",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "node server.js",
+    "build": "next build",
+    "start": "NODE_ENV=production node server.js"
+  },
+  "dependencies": {
+    "dotenv": "^6.0.0",
+    "express": "^4.14.0",
+    "firebase": "^4.9.1",
+    "firebase-admin": "^5.8.2",
+    "isomorphic-unfetch": "2.0.0",
+    "next": "^6.1.0",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1"
+  },
+  "now": {
+    "name": "candaddyplayminecraft",
+    "alias": "candaddyplayminecraft",
+    "files": [
+      "credentials",
+      "pages",
+      "package.json",
+      "server.js",
+      "yarn.lock"
+    ],
+    "scale": {
+      "sfo1": {
+        "min": 1,
+        "max": 1
+      }
+    }
+  }
+}
