@@ -1,10 +1,11 @@
 import React, { Component } from 'react'
+import { string } from 'prop-types'
 import firebase from 'firebase'
 import Head from 'next/head'
 import clientCredentials from '../credentials/client'
 
-export default class Index extends Component {
-  static async getInitialProps({ req, query }) {
+class Index extends Component {
+  static async getInitialProps({ req }) {
     const snap = await req.firebaseServer
       .database()
       .ref('candaddyplay')
@@ -18,24 +19,14 @@ export default class Index extends Component {
     this.state = {
       candaddyplay: this.props.candaddyplay
     }
-
-    this.addDbListener = this.addDbListener.bind(this)
   }
 
   componentDidMount() {
-    firebase.initializeApp(clientCredentials)
+    if (!firebase.apps.length) {
+      firebase.initializeApp(clientCredentials)
+    }
 
     this.addDbListener()
-  }
-
-  async addDbListener() {
-    firebase
-      .database()
-      .ref('candaddyplay')
-      .on('value', snap => {
-        const candaddyplay = snap.val()
-        if (candaddyplay) this.setState({ candaddyplay })
-      })
   }
 
   render() {
@@ -86,4 +77,24 @@ export default class Index extends Component {
       </div>
     )
   }
+
+  addDbListener = () => {
+    firebase
+      .database()
+      .ref('candaddyplay')
+      .on('value', snap => {
+        const candaddyplay = snap.val()
+        if (candaddyplay) this.setState({ candaddyplay })
+      })
+  }
 }
+
+Index.defaultProps = {
+  candaddyplay: 'yes'
+}
+
+Index.propTypes = {
+  candaddyplay: string
+}
+
+export default Index
