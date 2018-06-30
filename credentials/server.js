@@ -1,4 +1,3 @@
-const service_account = require('./service_account.json')
 
 module.exports = {
   projectID: process.env.FB_PROJECT_ID,
