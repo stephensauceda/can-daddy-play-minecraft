@@ -1,6 +1,4 @@
 node_modules
 .DS_Store
 .next
-credentials/client.js
-credentials/server.js
-credentials/service_account.json
+.env
