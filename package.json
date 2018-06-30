@@ -1,6 +1,9 @@
 {
   "name": "with-firebase",
   "version": "1.0.0",
+  "engines": {
+    "node": "8.9.x"
+  },
   "scripts": {
     "dev": "node server.js",
     "build": "next build",
