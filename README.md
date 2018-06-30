@@ -1,6 +1,6 @@
 # Can Daddy Play Minecraft
 
-[ ![Codeship Status for stephensauceda/can-daddy-play-minecraft](https://app.codeship.com/projects/3264ac20-5eb9-0136-f3f4-6e975dd0f2b8/status?branch=master)](https://app.codeship.com/projects/296076)
+[ ![Codeship Status for stephensauceda/can-daddy-play-minecraft](https://app.codeship.com/projects/3264ac20-5eb9-0136-f3f4-6e975dd0f2b8/status?branch=master)](https://app.codeship.com/projects/296076) [![codecov](https://codecov.io/gh/stephensauceda/can-daddy-play-minecraft/branch/master/graph/badge.svg)](https://codecov.io/gh/stephensauceda/can-daddy-play-minecraft)
 
 This is the frontend to https://candaddyplayminecraft.now.sh
 

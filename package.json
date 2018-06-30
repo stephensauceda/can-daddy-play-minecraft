@@ -34,8 +34,7 @@
     ],
     "testPathIgnorePatterns": [
       "<rootDir>/.next/', '<rootDir>/node_modules/"
-    ],
-    "verbose": true
+    ]
   },
   "now": {
     "name": "candaddyplayminecraft",
